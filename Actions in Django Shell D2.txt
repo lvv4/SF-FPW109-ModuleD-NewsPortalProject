@@ -1,0 +1,79 @@
+from news.models import Author
+from news.models import User
+
+user_MyDramaList = User.objects.create_user('MyDramaList')
+user_LilyAlice = User.objects.create_user('LilyAlice')
+
+author_LilyAlice=Author.objects.create(author=user_LilyAlice) 
+author_MyDramaList=Author.objects.create(author=user_MyDramaList) 
+
+from news.models import Category
+
+category_Netflix=Category.objects.create(category_name='Netflix')
+category_Viki=Category.objects.create(category_name='Viki')
+category_Wavve=Category.objects.create(category_name='Wavve')
+category_Series=Category.objects.create(category_name='Series')
+
+from news.models import Post
+
+post1=Post.objects.create(author=author_LilyAlice, post_type=True, post_title='''Release Date Confirmed for Kim Woo Bin's "Black Knight"''', post_text=''''Netflix has finally confirmed the release date of Black Knight. The action-adventure K-drama will be released on May 12, 2023. The OTT platform confirmed the date through a new poster of the drama. Black Knight is a drama set in a dystopian era.  The year is 2071. And the world couldn't be in a more desperate situation. Toxic air pollution has taken lives, leaving only 1% of the population to survive on what is now a wasteland. The society is controlled by a few elites, and Chunmyeong Group is among them who wield power and dominate the new world. The only way for people to survive is through parcels - containing necessities - delivered by delivery drivers, known as knights.  Kim Woo Bin plays the role of a knight named 5-8. Apart from the Our Blues actor, the K-drama also casts Esom in the role of a military intelligence officer Seol Ah, Kang Yoo Seok as the refugee April, and Song Seung Heon as the only heir of Chunmyeong Group Ryu Seok. Black Knight will air a total of six episodes. It will be Kim Woo Bin's first K-drama of the year. The first teaser of the series is yet to be released. Stay tuned for more updates!''')	
+
+post2=Post.objects.create(author=author_LilyAlice, post_type=False, post_title='''6 Things We Love About the K-drama "Taxi Driver Season 2"''', post_text='''Taxi Driver Season 2 made headlines with its release. The K-drama has been one of the most anticipated shows of 2023. Considering the huge success of its first season, it was expected that the second season will also be a hit. And it has definitely lived up to the hype, making us fall in love with the series all over again. Season 2 has maintained a streak of double-digit domestic ratings from episode 1 and was also ranked among the most popular K-dramas on Asia's largest OTT platform Viu. Moreover, it has also brought a swarm of new subscribers to Wavve. So, if you haven't checked out the series already, here are some of the amazing things you are missing out on. 1. The Rainbow Taxi Squad. The entire premise of the Taxi Driver series revolves around people's sufferings at the hands of despicable criminals and how the Rainbow Taxi squad avenges them.  The passengers of the deluxe taxi are victims of heinous crimes on whom the law closed its doors. And if you are wondering why the Rainbow Taxi members are so keen on avenging the victims, check out season 1 which tells the back story of each character and the reason that fuels their aim. But despite the painful stories, the heartbreaking moments, and the fierce fights, the K-drama deftly balances the intense plot with equally entertaining moments that give comic relief and invoke laughter, all thanks to the Rainbow Taxi squad. The unmissable moments which always manage to bring on our faces are when Choi Kyung Goo (Jang Hyuk Jin) and Park Jin Eon (Bae Yoo Ram) are on screen. No doubt, the actors do a splendid job to bring a smile to our faces leaving us with lingering memories. 2. The Distinctive Revenge Strategies. The revenge strategies of the Rainbow Taxi squad are not quite straightforward. Every case involves complex planning and strategies. And putting the plans into action is the ace hacker Ahn Go Eun (Pyo Ye Jin), the genius mechanics Choi Kyung Goo (Jang Hyuk Jin) and Park Jin Eon (Bae Yoo Ram), the caring leader Jang Sung Chul (Kim Eui Sung), and the taxi driver cum fighter Kim Do Gi (Lee Je Hoon). They are not the average vigilantes who only beat up the bad guys. Instead, they work to uproot the evil from the core and leave the criminals equally devastated and traumatised as the victims. The Rainbow Taxi squad carries out its missions in the most unique and artistic way with a great synergy that makes the K-drama a fun watch. Moreover, seeing the culprits, who don't even bat an eye before they inflict deep pain on innocent people, in emotional and physical agony after being taken down by the squad gives poetic justice and satisfies us to nod in agreement that the punishment was well served. 3. High-Octane Action Scenes. Through Taxi Driver, Lee Je Hoon marked his name among the most iconic action heroes of Korean cinema. From jaw-dropping stunts to high-spinning kicks and power-packed punches, Kim Do Ki is a force to be reckoned with. And we all know where he gets that from. The deluxe taxi driver is a former UDT (Underwater Demolition Team) soldier who uses his skills to fight for the weak. But Kim Do Ki does more than punching and kicking. He is also seen flaunting his excellent driving skills and making explosions in the K-drama. 4. Lee Jae Hoon's Sub Characters. One of the best things about Taxi Driver Season 2 and Season 1, which the K-drama absolutely cannot do without, is the sub-characters of Le Je Hoon. From a high school teacher to a local mechanic to Wang Tao Zhi, Lee Je Hoon flaunts his versatile acting chops by adapting himself to different characters for every new mission. The disguises are the means to infiltrate the den of the criminals and beat them at their own game. Not only the taxi driver, but the Rainbow Taxi Squad also takes the roles of different sub-characters in the drama. Pyo Je Hin and Kim Do Ki pretending to be a couple and  Park Jin Eon (Bae Yoo Ram) often being requested by Kim Do Ki to go undercover are some of the most hilarious and memorable scenes. The different roles the characters take in the show not only give an interesting twist but also increase our anticipation for the upcoming episodes. 5. The Stylish Deluxe Taxi and its Dashing Driver. Not only are the plot and the characters chic but all other elements of the K-drama are eye-catching too. The stylish black deluxe taxi and its dashing driver, who give special service to its special passengers, are a beacon of hope for the weak and wronged. This gives a unique angle to the K-drama as the taxi and its driver take us on an adventurous ride. 6. Awareness About Crimes. One of the most interesting facts about the K-drama Taxi Driver is that most of the crime stories are actually based on true events. The drama does a dual job of entertaining the viewers and educating them about the crimes happening in society. Cases from season 1 of the drama like the incident of Kang Maria, who was exploited because of her intellectual disability; the sex offender case of Cho Do Chul, who was released after serving his sentence in jail; and the U Data case where the CEO abused his company employees and used the company's platform to spread malicious content, are all inspired from actual crimes. The drama tells so many different stories which lay the base for the dynamic plot.''')
+
+post3=Post.objects.create(author=author_MyDramaList, post_type=False, post_title='''Top K-Drama Streaming Services for Drama Fans''', post_text='''We have put together a comprehensive guide on the best streaming services for K-dramas that you can use to catch up on your favorite shows online. Whether you're a K-drama enthusiast or a beginner, we've got you covered. Our guide includes detailed information on each of the top streaming services for K-dramas, along with their pros and cons. 1. Netflix. Netflix is one of the most popular streaming services for K-dramas, and for good reason. With a wide range of K-dramas available, including popular titles like "Crash Landing on You," "Itaewon Class," and "Kingdom," Netflix offers plenty of options for K-drama fans. The service also offers high-quality streaming, with many titles available in 4K Ultra HD. Plus, with the ability to download titles for offline viewing, you can take your K-dramas on the go. 2. Viki. Viki is another popular streaming service for K-dramas, with a large selection of titles available. One of the unique features of Viki is that it offers subtitles in many different languages, including English, Spanish, and Portuguese. This makes it a great option for international viewers who may not speak Korean as their first language. Viki also offers a premium subscription service, which allows for ad-free viewing and access to exclusive content. 3. Kocowa. Kocowa is a newer streaming service for K-dramas, but it has quickly become a favorite among fans. With a focus on Korean content, Kocowa offers a wide range of K-dramas, along with variety shows and other programming. The service also offers high-quality streaming, with many titles available in 1080p HD. Plus, with a subscription, you can watch new episodes of your favorite K-dramas just hours after they air in Korea. 4. iQiyi. iQiyi is a Chinese streaming service that offers a selection of K-dramas, along with other Asian content. While the service is not as well-known in the US as some of the other options on this list, it is still worth considering for K-drama fans. iQiyi offers high-quality streaming, with many titles available in 4K Ultra HD. The service also offers a free trial, so you can test it out before committing to a subscription. 5. Amazon Prime Video. Amazon Prime Video is another streaming service that offers a selection of K-dramas. While the selection may not be as extensive as some of the other options on this list, Amazon Prime Video is still a good choice for K-drama fans who already have a Prime subscription. The service also offers the ability to rent or purchase individual titles, which can be a good option if you only want to watch a few specific K-dramas. In conclusion, there are many great streaming services available for K-dramas, each with their own unique features and benefits. By using our guide, you can find the streaming service that best fits your needs and start watching your favorite K-dramas online today.''')
+
+from news.models import PostCategory
+
+post1.categories.add(category_Netflix)
+post1.categories.add(category_Series)
+post2.categories.add(category_Series)
+post2.categories.add(category_Viki)
+post2.categories.add(category_Wavve)
+post3.categories.add(category_Netflix)
+post3.categories.add(category_Viki)
+
+from news.models import Comment
+
+comment1=Comment(post=post1, user=user_MyDramaList, comment_text='''FINALLY !!!!!!!!! And I love this genre, can't wait!''')
+comment2=Comment(post=post3, user=user_LilyAlice, comment_text='''Disney+/Hulu is another great option. There's a few new shows and some old favorites. Much. better than what Amazon has to offer.''')
+Comment.objects.create(post=Post.objects.get(pk=2), user=User.objects.get(pk=1), comment_text='''Happy to see this posts. Agree on what you stated cuz that's what i thought so. By watching this drama, I feel like we are being reminded on what happened and need to be careful in daily life and yes, it's fun to watch Do Gi transformed to (sometimes) a nerd.''')
+Comment.objects.create(post=Post.objects.get(pk=2), user=User.objects.get(pk=2), comment_text='''What an Awesome show and the cast is amazing.''')
+
+post1.like()
+post1.like()
+post1.like()
+post1.like()
+post1.like()
+
+post2.like()
+post2.like()
+post2.like()
+post2.dislike()
+
+post3.like()
+post3.like()
+post3.dislike()
+
+comment1.like()
+comment1.like()
+comment1.like()
+comment1.like()
+comment1.like()
+
+comment2.like()
+
+author_MyDramaList.update_rating()
+author_LilyAlice.update_rating()
+
+User.objects.all().order_by('-user__author_rank').values('username', 'user__author_rank').first()
+
+Post.objects.all().order_by('-post_rank').values('post_pub_time', 'author__author__username', 'post_rank', 'post_title').first()
+Post.objects.all().order_by('-post_rank').first().preview()
+
+Post.objects.all().order_by('-post_rank').first().comments.all().values('comment_pub_time', 'user__username', 'comment_rank', 'comment_text')
+
+
+
+
+
+
